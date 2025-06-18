@@ -1,0 +1,110 @@
+:root {
+  --primary: #0056b3;
+  --light: #fff;
+  --bg: #f0f4fb;
+  --text: #222;
+  --radius: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--light);
+  color: var(--text);
+}
+
+header {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  color: var(--light);
+  margin: 0 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main.board {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 10px;
+  width: 280px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: var(--light);
+  border-left: 4px solid var(--primary);
+  padding: 8px;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.actions button {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: var(--radius);
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  margin: 4px 4px 0 0;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #004494;
+}
+
+.form-editar input,
+.form-mover select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+}
+
+.form-editar button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.form-editar button:hover {
+  background: #1e7e34;
+}
+
+@media (max-width: 768px) {
+  main.board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 90%;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciamento de Tarefas</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastrar Tarefas</h1>
+        <nav>
+            <ul>
+                <li><a href="../Tela Login/index.html">Cadastrar Usuario</a></li>
+                <li><a href="../Gerencia/index.html">Ver Tarefas Cadastradas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="cadastro">
+        <main>
+            <form>
+                <label for="setor">Setor:</label>
+                    <select id="setor" name="setor" required>
+                        <option value="">Selecione o setor</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                        <br>        
+                <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                         <br>
+                <label for="prioridade">Prioridade:</label>
+                    <select id="prioridade" name="prioridade" required>
+                        <option value="">Selecione a prioridade</option>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                        <br>
+                <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                        <br>
+                    <button onclick="cadastrarTarefa()" type="submit">Cadastrar</button>
+            </form>
+        </main>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
